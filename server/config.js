@@ -12,6 +12,9 @@ var TeamModel = require('./Models/TeamModel/data');
 
 
 var config = {
+    secretKeys :{
+        JwtKey : "Your Secret Key in here"
+    },
     mysqlInfo: {
         connectTimeout: 10,
         password: '',

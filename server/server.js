@@ -1,4 +1,5 @@
 const express = require('express');
+const _config = require('./config');
 
 //Routers
 const playerRoutes = require('./routes/Player/index');
@@ -6,6 +7,8 @@ const newsRoutes = require('./routes/News/index');
 const historyMatch = require('./routes/HistoryMatch/index');
 
 const app = express();
+
+app.set("jwt_key", _config.secretKeys.JwtKey);
 
 app.use(express.json());
 
