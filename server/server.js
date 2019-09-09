@@ -1,5 +1,6 @@
 const express = require('express');
 const _config = require('./config');
+const cors = require('cors');
 
 //Routers
 const playerRoutes = require('./routes/Player/index');
@@ -11,6 +12,7 @@ const app = express();
 app.set("jwt_key", _config.secretKeys.JwtKey);
 
 app.use(express.json());
+app.use(cors());
 
 app.use('/api/players', playerRoutes);
 app.use('/api/news', newsRoutes);

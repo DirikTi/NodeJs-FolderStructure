@@ -12,6 +12,10 @@ var TeamModel = require('./Models/TeamModel/data');
 
 
 var config = {
+    corsOptions: {
+        origin: 'http://localhost:8080',
+        optionsSuccessStatus: 200,
+    },
     secretKeys :{
         JwtKey : "Your Secret Key in here"
     },
