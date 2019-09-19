@@ -1,6 +1,8 @@
 const express = require('express');
 const _config = require('./config');
 const cors = require('cors');
+const Redis = require('./helpers/Redis');
+
 
 //Routers
 const playerRoutes = require('./routes/Player/index');
@@ -17,6 +19,7 @@ app.use(cors());
 app.use('/api/players', playerRoutes);
 app.use('/api/news', newsRoutes);
 app.use('/api/HistoryMatch/', historyMatch);
+
 
 
 app.listen(process.env.PORT || '3000', () => {

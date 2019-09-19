@@ -16,6 +16,11 @@ var config = {
         origin: 'http://localhost:8080',
         optionsSuccessStatus: 200,
     },
+    memcached: {
+        retries:10,
+        retry:10000,
+        remove:true
+    },
     secretKeys :{
         JwtKey : "Your Secret Key in here"
     },
